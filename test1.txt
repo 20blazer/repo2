@@ -1,10 +1,1 @@
- Volume in drive C is OS
- Volume Serial Number is 045C-9092
-
- Directory of C:\Users\20bla\Desktop\ProjectGit1
-
-04/09/2024  11:39 AM    <DIR>          .
-04/09/2024  11:30 AM    <DIR>          ..
-04/09/2024  11:39 AM                 0 test1.txt
-               1 File(s)              0 bytes
-               2 Dir(s)  436,304,896,000 bytes free
+change 1
