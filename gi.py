@@ -21,6 +21,10 @@ if __name__ == "__main__":
 
     food = input("\nPlease eneter a food name:")
 
+    # check for empty strings of string with only space
+    if not bool(food.strip()):
+        food = "Milky Way bar"
+
     GI_data = get_GI(food)
 
     print("\n")
