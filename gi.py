@@ -1,17 +1,19 @@
-from dotenv import load_dotenv
+import json
 from pprint import pprint
 import requests
 import os
 
-load_dotenv()
+# Load the JSON data
+with open('Gtable.json', 'r') as json_file:
+    data = json.load(json_file)
 
-def get_GI(food="bread"):
-
-    request_json = f'1'                                                      #request_json = info from table based on name colmn
-
-    GI_data = requests.get(request_json).json()
-
-    return GI_data
+def get_GI(Food):
+   
+    for row in data:
+        if row['Food'].lower() == Food.lower():
+            GI_data = {'Food': Food, 'GI': row["GI"], 'GL': row["GL"], 'Carb': row["Carb"] }
+            return GI_data
+    return None
 
 
 if __name__ == "__main__":
