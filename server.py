@@ -30,6 +30,6 @@ def get_Ginfo():
         GL=f"{GI_data['GL']}",
         Carb=f"{GI_data['Carb']}"
     )
-
+  
 if __name__ == "__main__":
     serve(app, host="0.0.0.0", port =8000)
