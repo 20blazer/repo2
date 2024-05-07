@@ -4,7 +4,7 @@ import requests
 import os
 
 # Load the JSON data
-with open('Gtable.json', 'r') as json_file:
+with open('static/styles/Gtable.json', 'r') as json_file:
     data = json.load(json_file)
 
 def get_GI(Food):
