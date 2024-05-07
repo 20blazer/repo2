@@ -26,7 +26,7 @@ input, button {
     width: calc(100% - 20px); /* Subtract padding */
     max-height: 200px; /* Limit height */
     overflow-y: auto; /* Enable vertical scroll */
-    background-color: #1e1960;
+    background-color: #333333;
     border: 1px solid #ccc;
     border-top: none;
     z-index: 1;

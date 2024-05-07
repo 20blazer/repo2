@@ -2,7 +2,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const foodInput = document.getElementById('Food');
     const suggestionsList = document.getElementById('suggestions');
 
-    // let foodData = []; // Initialize as an empty array
 
     // Function to filter food suggestions
     function filterFood(query) {
