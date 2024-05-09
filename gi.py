@@ -4,7 +4,7 @@ import requests
 import os
 
 # Load the JSON data
-with open('static/styles/Gtable.json', 'r') as json_file:
+with open('static/Gtable.json', 'r') as json_file:
     data = json.load(json_file)
 
 def get_GI(Food):
@@ -19,13 +19,13 @@ def get_GI(Food):
 if __name__ == "__main__":
     print('\n*** Get GI data ***\n')
 
-    food = input("\nPlease eneter a food name:")
+    inputbar = input("\nPlease eneter a food name:")
 
     # check for empty strings of string with only space
-    if not bool(food.strip()):
-        food = "Milky Way bar"
+    if not bool(inputbar.strip()):
+        inputbar = "Milky Way bar"
 
-    GI_data = get_GI(food)
+    GI_data = get_GI(inputbar)
 
     print("\n")
     pprint(GI_data)                                                           #provide GI_data at the terminal

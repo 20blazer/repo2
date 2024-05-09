@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Fetch food data from JSON file
-    fetch('static/styles/Gtable.json')
+    fetch('static/Gtable.json')
         .then(response => {
             if (!response.ok) {
                 throw new Error('Failed to fetch food data');

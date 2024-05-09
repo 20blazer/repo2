@@ -9,26 +9,26 @@ def index():
   return render_template('index.html')
 
 @app.route('/GI')
-def get_Ginfo():
-    food = request.args.get('Food')
+def Load_info():
+    inputbar = request.args.get('Food')
 
-    # check for empty strings of string with only space
-    if not bool(food.strip()):
-        food = "Milky Way bar"
+    # check for empty strings or string with only space
+    if not bool(inputbar.strip()):
+        inputbar = "Milky Way bar" #bc space lol
 
-    GI_data = get_GI(food)
+    GI_data = get_GI(inputbar)
     
-    # #Food is not in database
+    #input is not in database
     if not GI_data:
         return render_template('Food-NF.html')
 
     return render_template(
         "gi.html",       
-        # GI_data
-        title=GI_data['Food'],
-        GI= f"{GI_data['GI']}",
-        GL=f"{GI_data['GL']}",
-        Carb=f"{GI_data['Carb']}"
+        #define GI data in html
+        title = GI_data['Food'],
+        GI = GI_data['GI'],
+        GL = GI_data['GL'],
+        Carb = GI_data['Carb']
     )
   
 if __name__ == "__main__":
